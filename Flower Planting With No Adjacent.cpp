@@ -7,7 +7,7 @@ public:
             v[paths[i][0]].push_back(paths[i][1]);
             v[paths[i][1]].push_back(paths[i][0]);
         }
-        int visited[N+1];
+        int visited[N+1];//to store color of flower in each garden
         for(int j=1;j<N+1;j++)
         {
             visited[j]=0;
@@ -22,7 +22,7 @@ public:
             }
             while(!q.empty())
             {
-                bool flower[5]={false};
+                bool flower[5]={false};// to check for colors in neighbouring gardens
                 int top= q.front();
                 flower[visited[top]]=true;
                 q.pop();
